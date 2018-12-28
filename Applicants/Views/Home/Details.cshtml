@@ -1,0 +1,22 @@
+﻿@model Applicants.Models.ApplicantViewModel
+
+<div class="row">
+    <div class="col-md-6 col-md-offset-3 well">
+        <h4>Name: @Model.Applicant.FirstName @Model.Applicant.LastName</h4>
+        <h4>Phone: @Model.Applicant.Phone</h4>
+        <h4>Email: @Model.Applicant.Email</h4>
+        <h4>Status: @Model.Applicant.Status</h4>
+        <h4>Notes:</h4>
+        <p>@Model.Applicant.Notes</p>
+        <input type="hidden" value="@Model.Applicant.Id" id="applicantId" />
+        <div id="buttons">
+            <button class="btn btn-warning" id="confirm-button">Confirm</button>
+            <button class="btn btn-danger" id="refuse-button">Refuse</button>
+        </div>
+    </div>
+</div>
+
+@section scripts
+    {
+    <script src="~/Scripts/pending.js"></script>
+}
